@@ -3,6 +3,7 @@ package mlb;
  * @author Roman Yasinovskyy
  */
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.ArrayList;
 @JsonIgnoreProperties(ignoreUnknown = true)
 
@@ -46,36 +47,42 @@ public class Team {
     /**
      * @return Team id
      */
+    @JsonProperty("team_id")
     public String getId() {
         return this.id;
     }
     /**
      * @return Team abbreviation
      */
+    @JsonProperty("abbreviation")
     public String getAbbreviation() {
         return this.abbreviation;
     }
     /**
      * @return Team name
      */
+    @JsonProperty("full_name")
     public String getName() {
         return this.name;
     }
     /**
      * @return Team conference
      */
+    @JsonProperty("conference")
     public String getConference() {
         return this.conference;
     }
     /**
      * @return Team division
      */
+    @JsonProperty("division")
     public String getDivision() {
         return this.division;
     }
     /**
      * @return Team roster
      */
+    @JsonProperty("roster")
     public ArrayList<Player> getRoster() {
         return this.roster;
     }
@@ -118,6 +125,9 @@ public class Team {
     @Override
     public String toString() {
         // TODO: Implement this method
-        throw new UnsupportedOperationException();
+        Address address=this.getAddress();
+        return address.getTeam()+'\n'+this.getConference()+" | "+
+                this.getDivision()+"\n"+address.toString()+"\n"+
+                "Roster size: "+this.getRoster().size();
     }
 }
