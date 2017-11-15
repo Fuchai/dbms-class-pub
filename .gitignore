@@ -7,9 +7,6 @@
 # BlueJ files
 *.ctxt
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
 # Package Files
 #*.jar
 *.war
@@ -17,20 +14,13 @@
 *.zip
 *.tar.gz
 *.rar
-
+s
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
-# Netbeans files
-nbproject/private/
-build/
-nbbuild/
-dist/
-nbdist/
+
 .nb-gradle
 
-# VS Code config
-.vscode/
 
 # Eclipse
 .classpath
@@ -43,8 +33,6 @@ eclipsebin
 *.iml
 *.ipl
 *.iws
-classes/
-idea-classes/
 coverage-error.log
 
 # Android
@@ -55,5 +43,4 @@ out
 
 # Finder
 .DS_Store
-
 

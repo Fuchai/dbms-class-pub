@@ -1,0 +1,37 @@
+group 'nbproject'
+version 'JasonHu-2.0'
+
+apply plugin: 'java'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile files("lib/commons-lang3.jar")
+    compile files("lib/jackson-annotations.jar")
+    compile files("lib/jackson-core.jar")
+    compile files("lib/jackson-databind.jar")
+    compile files("lib/mysql-connector-java.jar")
+    compile files("lib/mysql-connector-java.jar")
+    compile files("lib/opencsv.jar")
+    compile files("lib/postgresql-jdbc.jar")
+    compile files("lib/sqlite-jdbc.jar")
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs 'src'
+        }
+    }
+    test{
+        java{
+            srcDirs 'test'
+        }
+    }
+}

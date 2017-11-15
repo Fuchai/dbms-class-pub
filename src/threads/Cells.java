@@ -1,11 +1,9 @@
-/*
+package threads;/*
     Java threads example
 */
 
-import java.math.*;
-import java.io.*;
-import java.text.ParseException;
 import java.text.DecimalFormat;
+import java.text.ParseException;
 
 class TArray {
     int TotCells; //total number of cells
